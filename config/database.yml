@@ -81,6 +81,11 @@ test:
 #
 production:
   <<: *default
-  database: rails_elastic_beanstalk_production
-  username: rails_elastic_beanstalk
-  password: <%= ENV["RAILS_ELASTIC_BEANSTALK_DATABASE_PASSWORD"] %>
+  # database: rails_elastic_beanstalk_production
+  # username: rails_elastic_beanstalk
+  # password: <%= ENV["RAILS_ELASTIC_BEANSTALK_DATABASE_PASSWORD"] %>
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>

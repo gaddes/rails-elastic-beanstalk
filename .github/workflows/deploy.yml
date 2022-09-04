@@ -5,6 +5,7 @@ on: workflow_dispatch
 #    branches: [ "main" ]
 jobs:
   deploy:
+    name: Deploy to Elastic Beanstalk
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

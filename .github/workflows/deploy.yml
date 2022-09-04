@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to Elastic Beanstalk
     steps:
+    - uses: actions/checkout@v3
+      name: Checkout code on runner
     - uses: hmanzur/actions-aws-eb@v1.0.0
-      name: Provide EB CLI commands & deploy
+      name: Deploy with EB CLI
       with:
         command: 'deploy ${{ secrets.ENVIRONMENT_NAME }}'
       env:

@@ -25,4 +25,4 @@ jobs:
     - name: Deploy to Elastic Beanstalk
       run: |
         eb init --platform ruby-3.0
-        eb deploy
+        eb deploy ${{ secrets.ENVIRONMENT_NAME }}

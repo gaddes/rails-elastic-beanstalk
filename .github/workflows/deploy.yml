@@ -27,4 +27,4 @@ jobs:
     - name: Deploy to Elastic Beanstalk
       run: |
         eb init -i ${{env.APP_NAME}} -p ${{env.AWS_PLATFORM}} -k ${{secrets.AWS_KEY_NAME}} --region ${{secrets.AWS_DEFAULT_REGION}}
-        eb deploy ${{ env.APP_NAME }}
+        eb deploy ${{ secrets.ENVIRONMENT_NAME }}

@@ -22,5 +22,5 @@ jobs:
         pip install awsebcli
     - name: Deploy to Elastic Beanstalk
       run: |
-        eb init
+        eb init --platform ruby-3.0
         eb deploy
